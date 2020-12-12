@@ -11,7 +11,7 @@ services:
         condition: on-failure
       mode: global
   web:
-    image: vm1/stackdemo
+    image: vm1:5000/stackdemo
     ports:
       - "8000:8000"
     deploy:
