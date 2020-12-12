@@ -9,7 +9,7 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
-      mode: global
+      mode: replicated
   web:
     image: vm1:5000/stackdemo
     ports:
