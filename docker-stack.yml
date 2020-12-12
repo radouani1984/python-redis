@@ -11,7 +11,7 @@ services:
         condition: on-failure
       mode: replicated
       placement:
-        constaints: [node.role == manager]
+        constraints: [node.role == manager]
   web:
     image: vm1:5000/stackdemo
     ports:
@@ -25,4 +25,4 @@ services:
         condition: on-failure
       mode: replicated
       placement:
-        constaints: [node.labels.type == vm1_worker_web]
+        constraints: [node.labels.type == vm1_worker_web]
