@@ -10,6 +10,8 @@ services:
       restart_policy:
         condition: on-failure
       mode: replicated
+      placement:
+        constaints: [node.role == manager]
   web:
     image: vm1:5000/stackdemo
     ports:
@@ -22,3 +24,5 @@ services:
       restart_policy:
         condition: on-failure
       mode: replicated
+      placement:
+        constaints: [node.labels.type == vm1_worker_web]
